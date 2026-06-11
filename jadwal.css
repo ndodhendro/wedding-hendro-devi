@@ -1,0 +1,204 @@
+:root {
+  --bg: #f4f1fa;            /* soft lavender white */
+  --card: #ffffff;
+  --ink: #4a4458;          /* muted plum-grey */
+  --muted: #9a93ad;        /* soft lavender-grey */
+  --accent: #8c9ede;       /* periwinkle blue */
+  --accent-soft: #e2e6f7;  /* pale periwinkle */
+  --line: #e8e3f2;         /* lavender line */
+  --highlight: #fbe7ef;    /* pastel pink */
+  --highlight-accent: #e98ab3; /* rose pink */
+  --shadow: 0 4px 18px rgba(140, 130, 190, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(160deg, #f4f1fa 0%, #fbe7ef 50%, #e2e6f7 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  line-height: 1.5;
+  padding: 2.5rem 1rem 4rem;
+}
+
+/* ---------- Header ---------- */
+.page-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.day-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.day-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(140, 130, 190, 0.22);
+}
+
+.day-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.9rem 1.25rem;
+  background: linear-gradient(90deg, var(--accent-soft) 0%, var(--highlight) 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.weekday {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+/* ---------- Agenda ---------- */
+.agenda {
+  list-style: none;
+  padding: 0.4rem 0;
+}
+
+.agenda li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.agenda li:last-child {
+  border-bottom: none;
+}
+
+.agenda li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.task {
+  flex: 1;
+}
+
+.time {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.tag {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7a5ea8;
+  background: #efe6fa;
+  border: 1px solid #ddccf2;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---------- Highlight (Wedding) ---------- */
+.day-card.highlight {
+  border-color: var(--highlight-accent);
+}
+
+.day-card.highlight .day-head {
+  background: linear-gradient(90deg, var(--highlight) 0%, #f7d9e6 100%);
+  border-bottom-color: #f3cdd7;
+}
+
+.day-card.highlight .weekday {
+  color: var(--highlight-accent);
+}
+
+.day-card.highlight .agenda li::before {
+  background: var(--highlight-accent);
+}
+
+.day-card.highlight .time {
+  color: #fff;
+  background: var(--highlight-accent);
+}
+
+/* ---------- Footer ---------- */
+.page-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.page-footer code {
+  background: var(--accent-soft);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 520px) {
+  .day-head {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .date {
+    margin-left: 0;
+  }
+  .agenda li {
+    flex-wrap: wrap;
+  }
+}
