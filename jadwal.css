@@ -8,6 +8,7 @@
   --line: #e8e3f2;         /* lavender line */
   --highlight: #fbe7ef;    /* pastel pink */
   --highlight-accent: #e98ab3; /* rose pink */
+  --highlight-green: #B1F9A4; /* pastel green light */
   --highlight-accent-green: #80EF80; /* pastel green */
   --shadow: 0 4px 18px rgba(140, 130, 190, 0.14);
 }
@@ -176,6 +177,29 @@ body {
   background: var(--highlight-accent);
 }
 
+/* ---------- Highlight (Honeymoon) ---------- */
+.day-card.highlight-honeymoon {
+  border-color: var(--highlight-accent-green);
+}
+
+.day-card.highlight-honeymoon .day-head {
+  background: linear-gradient(90deg, var(--highlight-green) 0%, #C2FBB8 100%);
+  border-bottom-color: #DCFCD6;
+}
+
+.day-card.highlight-honeymoon .weekday {
+  color: var(--highlight-accent-green);
+}
+
+.day-card.highlight-honeymoon .agenda li::before {
+  background: var(--highlight-accent-green);
+}
+
+.day-card.highlight-honeymoon .time {
+  color: #fff;
+  background: var(--highlight-accent-green);
+}
+
 /* ---------- Footer ---------- */
 .page-footer {
   text-align: center;
@@ -188,11 +212,6 @@ body {
   background: var(--accent-soft);
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
-}
-
-/* ---------- Honeymoon ---------- */
-.day-card.highlight-green {
-  border-color: var(--highlight-accent-green);
 }
 
 /* ---------- Responsive ---------- */
