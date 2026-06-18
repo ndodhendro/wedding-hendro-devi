@@ -190,6 +190,11 @@ body {
   border-radius: 4px;
 }
 
+/* ---------- Honeymoon ---------- */
+.day-card.highlight-green {
+  border-color: var(--highlight-accent-green);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 520px) {
   .day-head {
