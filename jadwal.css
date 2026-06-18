@@ -8,6 +8,7 @@
   --line: #e8e3f2;         /* lavender line */
   --highlight: #fbe7ef;    /* pastel pink */
   --highlight-accent: #e98ab3; /* rose pink */
+  --highlight-accent-green: #80EF80; /* pastel green */
   --shadow: 0 4px 18px rgba(140, 130, 190, 0.14);
 }
 
