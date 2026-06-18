@@ -183,7 +183,7 @@ body {
 }
 
 .day-card.highlight-honeymoon .day-head {
-  background: linear-gradient(90deg, var(--highlight-green) 0%, #C2FBB8 100%);
+  background: linear-gradient(90deg, var(--highlight-green) 0%, #E4FDE0 100%);
   border-bottom-color: #DCFCD6;
 }
 
